@@ -64,13 +64,13 @@ export const SearchBar = ({ result, onSearch, onClear }) => {
             transition={{ duration: 0.25 }}
             className="absolute left-0 right-0 top-full mt-2 glass border border-nw-line rounded-xl shadow-2xl p-4"
           >
-            <div className="flex items-center justify-between">
-              <div className="text-xs text-nw-muted">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div className="text-[13px] text-nw-muted">
                 <span className="font-mono text-nw-accent">{result.results.length}</span> incident{result.results.length === 1 ? "" : "s"} across{" "}
                 <span className="font-mono text-nw-accent">{result.wellIds.size}</span> well{result.wellIds.size === 1 ? "" : "s"} match <span className="text-nw-text">“{result.query}”</span>
                 {result.partial && <span className="text-nw-warn"> · partial match</span>} · highlighted in the offset network below
               </div>
-              <button className="text-nw-dim hover:text-nw-text text-[11px] flex items-center gap-1" onClick={() => setOpen(false)} data-testid="search-results-close-button">
+              <button className="text-nw-dim hover:text-nw-text text-[13px] flex items-center gap-1" onClick={() => setOpen(false)} data-testid="search-results-close-button">
                 Close <span className="chip !py-0 !px-1.5 font-mono">Esc</span>
               </button>
             </div>
@@ -82,13 +82,13 @@ export const SearchBar = ({ result, onSearch, onClear }) => {
                   const t = INCIDENT_TYPES[incident.type];
                   return (
                     <li key={incident.id} className="rounded-lg border border-nw-line/70 bg-nw-bg/40 px-3 py-2.5" data-testid={`search-result-${incident.id}`}>
-                      <div className="flex items-baseline gap-2 text-[11px]">
+                      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 text-[13px]">
                         <span className="font-display font-semibold text-nw-text">{well.id}</span>
                         <span className="font-mono text-nw-muted tabular">{fmtInt(incident.depth)} m</span>
                         <span className="font-semibold" style={{ color: t.color }}>{t.label}</span>
                         <span className="text-nw-dim ml-auto">{incident.formation} · {well.distanceKm} km {compass(well.azimuth)}</span>
                       </div>
-                      <p className="text-[11px] text-nw-muted mt-1 leading-relaxed line-clamp-2"><span className="text-nw-ok font-display font-semibold uppercase text-[9px] tracking-wider mr-1">Fix</span>{incident.remedy}</p>
+                      <p className="text-[13px] text-nw-muted mt-1 leading-relaxed line-clamp-2"><span className="text-nw-ok font-display font-semibold uppercase text-[10px] tracking-wider mr-1">Fix</span>{incident.remedy}</p>
                     </li>
                   );
                 })}

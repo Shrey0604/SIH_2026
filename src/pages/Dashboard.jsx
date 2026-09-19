@@ -23,7 +23,7 @@ export default function Dashboard() {
   const onSearch = (q) => {
     const r = searchKnowledge(q);
     setSearch(r);
-    if (r && r.wellIds.size >= 1) setSelectedWellId([...r.wellIds][0]);
+    if (r) setSelectedWellId(r.wellIds.size ? [...r.wellIds][0] : null);
   };
   const clearSearch = () => setSearch(null);
   const locate = (id) => {
@@ -41,7 +41,7 @@ export default function Dashboard() {
         onAck={() => setAcked(true)}
         onViewCase={() => caseRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })}
       />
-      <div className="nwis-content max-w-[1760px] mx-auto px-6 pb-10">
+      <div className="nwis-content max-w-[1760px] mx-auto px-4 sm:px-6 pb-10">
         <Header
           current={eng.current}
           tick={eng.tick}
@@ -54,10 +54,10 @@ export default function Dashboard() {
         <DemoTimeline tick={eng.tick} phase={eng.phase} />
         <SearchBar result={search} onSearch={onSearch} onClear={clearSearch} />
 
-        <main className="grid grid-cols-12 gap-5 mt-5">
-          <div className="col-span-12 xl:col-span-8 flex flex-col gap-5 min-w-0">
+        <main className="grid grid-cols-12 gap-4 sm:gap-5 mt-5">
+          <div className="col-span-12 xl:col-span-8 flex flex-col gap-4 sm:gap-5 min-w-0">
             <LiveMonitor points={eng.points} tick={eng.tick} phase={eng.phase} current={eng.current} />
-            <div className="grid grid-cols-12 gap-5">
+            <div className="grid grid-cols-12 gap-4 sm:gap-5">
               <div className="col-span-12 2xl:col-span-8 min-w-0" ref={wellsRef}>
                 <NearbyWells
                   selectedId={selectedWellId}
@@ -72,7 +72,7 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="col-span-12 xl:col-span-4 flex flex-col gap-5 min-w-0">
+          <div className="col-span-12 xl:col-span-4 flex flex-col gap-4 sm:gap-5 min-w-0">
             <RiskGauge risk={eng.current.risk} phase={eng.phase} criticalHit={eng.criticalHit} />
             <div ref={caseRef} className="flex-1 flex">
               <CaseFilePanel criticalHit={eng.criticalHit} current={eng.current} onLocate={locate} />
@@ -80,9 +80,9 @@ export default function Dashboard() {
           </div>
         </main>
 
-        <footer className="mt-8 flex items-center justify-between text-[11px] text-nw-dim border-t border-nw-line/60 pt-4" data-testid="dashboard-footer">
-          <span>eRTMAC · NWIS proof-of-concept · Smart India Hackathon</span>
-          <span className="font-mono">Synthetic telemetry · Upper Assam Shelf offset archive · not for operational use</span>
+        <footer className="mt-8 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-2 text-[13px] text-nw-dim border-t border-nw-line/60 pt-4" data-testid="dashboard-footer">
+          <span className="text-center lg:text-left">eRTMAC · NWIS proof-of-concept · Smart India Hackathon</span>
+          <span className="font-mono text-center lg:text-right">Synthetic telemetry · Upper Assam Shelf offset archive · not for operational use</span>
         </footer>
       </div>
     </div>

@@ -39,6 +39,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "cv11", "ss01";
+    overflow-x: hidden;
+    overflow-x: clip;
   }
   ::selection {
     background: rgba(34, 211, 238, 0.28);
@@ -99,7 +101,7 @@
 }
 .eyebrow {
   font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -113,7 +115,7 @@
   border-radius: 6px;
   border: 1px solid #2a3548;
   background: rgba(11, 18, 32, 0.5);
-  font-size: 11px;
+  font-size: 12px;
   color: #94a3b8;
   white-space: nowrap;
   transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
@@ -133,7 +135,7 @@ button.chip:hover {
   background: rgba(22, 30, 46, 0.8);
   color: #e2e8f0;
   font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.06em;
   transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
@@ -173,7 +175,7 @@ input:focus-visible {
 }
 .radar-sweep {
   transform-origin: 50% 50%;
-  transform-box: fill-box;
+  transform-box: view-box;
   animation: radar-sweep 5.5s linear infinite;
 }
 .chart-scroll {

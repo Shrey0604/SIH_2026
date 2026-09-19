@@ -4,7 +4,7 @@ export const Panel = ({ title, subtitle, right, children, className = "", critic
       <header className="flex items-start justify-between gap-4 px-5 pt-4 pb-3 border-b border-nw-line/70">
         <div className="min-w-0">
           <h3 className="eyebrow">{title}</h3>
-          {subtitle && <p className="text-xs text-nw-dim mt-1 truncate">{subtitle}</p>}
+          {subtitle && <p className="text-[13px] text-nw-dim mt-1 truncate">{subtitle}</p>}
         </div>
         {right}
       </header>
@@ -16,7 +16,7 @@ export const Panel = ({ title, subtitle, right, children, className = "", critic
 export const LiveBadge = ({ testId, label = "LIVE" }) => (
   <span
     data-testid={testId}
-    className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-nw-ok/40 bg-nw-ok/10 text-[10px] font-display font-semibold tracking-[0.18em] text-nw-ok"
+    className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-nw-ok/40 bg-nw-ok/10 text-[11px] font-display font-semibold tracking-[0.18em] text-nw-ok"
   >
     <span className="live-dot w-1.5 h-1.5 rounded-full bg-nw-ok" />
     {label}
@@ -34,7 +34,7 @@ export const StatusBadge = ({ phase, testId }) => {
   return (
     <span
       data-testid={testId}
-      className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border text-[10px] font-display font-semibold tracking-[0.16em] uppercase whitespace-nowrap transition-colors duration-500"
+      className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border text-[11px] font-display font-semibold tracking-[0.16em] uppercase whitespace-nowrap transition-colors duration-500"
       style={{ color: m.color, borderColor: `${m.color}66`, background: `${m.color}14` }}
     >
       <span className={`w-1.5 h-1.5 rounded-full ${phase === "critical" ? "live-dot" : ""}`} style={{ background: m.color, boxShadow: `0 0 8px ${m.color}` }} />
@@ -66,12 +66,12 @@ export const Logo = () => (
 
 export const Stat = ({ label, value, unit, testId, mono = true, accent }) => (
   <div data-testid={testId} className="min-w-0">
-    <div className="eyebrow !text-[10px]">{label}</div>
+    <div className="eyebrow !text-[11px]">{label}</div>
     <div className="flex items-baseline gap-1.5 mt-0.5">
       <span className={`${mono ? "font-mono" : "font-display"} text-lg font-medium tabular leading-none`} style={accent ? { color: accent } : undefined}>
         {value}
       </span>
-      {unit && <span className="text-[11px] text-nw-dim">{unit}</span>}
+      {unit && <span className="text-[13px] text-nw-dim">{unit}</span>}
     </div>
   </div>
 );

@@ -20,13 +20,13 @@ export const OffsetMap = ({ selectedId, highlightIds, criticalHit, onSelect }) =
       {[2, 4, 8].map((km) => (
         <g key={km}>
           <circle cx={C} cy={C} r={km * SCALE} fill="none" stroke="#2A3548" strokeWidth="1" strokeDasharray={km === 8 ? "0" : "3 4"} />
-          <text x={C + 3} y={C - km * SCALE - 3} fontSize="8" fill="#64748B" fontFamily="JetBrains Mono, monospace">{km} km</text>
+          <text x={C - 6} y={C - km * SCALE - 3} fontSize="9.5" fill="#64748B" textAnchor="end" fontFamily="JetBrains Mono, monospace">{km} km</text>
         </g>
       ))}
       <line x1={C} y1={C - 112} x2={C} y2={C + 112} stroke="#2A3548" strokeWidth="0.75" />
       <line x1={C - 112} y1={C} x2={C + 112} y2={C} stroke="#2A3548" strokeWidth="0.75" />
       <path d={`M${C} ${C} L${C} ${C - 112} A112 112 0 0 1 ${C + 112 * Math.sin(0.7)} ${C - 112 * Math.cos(0.7)} Z`} fill="url(#mapSweep)" className="radar-sweep" />
-      <text x={C} y={12} fontSize="8" fill="#64748B" textAnchor="middle" fontFamily="JetBrains Mono, monospace">N</text>
+      <text x={C} y={12} fontSize="9.5" fill="#64748B" textAnchor="middle" fontFamily="JetBrains Mono, monospace">N</text>
 
       {criticalHit && (
         <>
@@ -47,7 +47,7 @@ export const OffsetMap = ({ selectedId, highlightIds, criticalHit, onSelect }) =
             <circle cx={x} cy={y} r="11" fill="transparent" />
             {(selected || hi) && <circle cx={x} cy={y} r="7.5" fill="none" stroke="#22D3EE" strokeOpacity="0.6" strokeWidth="1" />}
             <circle cx={x} cy={y} r="4" fill={fill} stroke="#0B1220" strokeWidth="1.5" style={{ filter: isMatch || selected ? `drop-shadow(0 0 5px ${fill})` : "none" }} />
-            <text x={x} y={y - 8} fontSize="8.5" fill={isMatch ? "#FCA5A5" : selected || hi ? "#22D3EE" : "#94A3B8"} textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontWeight="500">
+            <text x={x} y={y - 8} fontSize="10" fill={isMatch ? "#FCA5A5" : selected || hi ? "#22D3EE" : "#94A3B8"} textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontWeight="500">
               {w.id}
             </text>
           </g>
@@ -57,7 +57,7 @@ export const OffsetMap = ({ selectedId, highlightIds, criticalHit, onSelect }) =
       <g data-testid="map-active-well-marker">
         <circle cx={C} cy={C} r="9" fill="none" stroke="#22D3EE" strokeOpacity="0.5" strokeWidth="1" style={{ transformOrigin: `${C}px ${C}px`, animation: "crit-ping 2s ease-out infinite" }} />
         <path d={`M${C} ${C - 6} L${C + 6} ${C} L${C} ${C + 6} L${C - 6} ${C} Z`} fill="#22D3EE" stroke="#0B1220" strokeWidth="1" />
-        <text x={C} y={C + 17} fontSize="8.5" fill="#22D3EE" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontWeight="600">{ACTIVE_WELL.id}</text>
+        <text x={C} y={C + 17} fontSize="10" fill="#22D3EE" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontWeight="600">{ACTIVE_WELL.id}</text>
       </g>
     </svg>
   );

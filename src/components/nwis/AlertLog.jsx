@@ -26,13 +26,13 @@ export const AlertLog = ({ alerts }) => (
               data-severity={a.severity}
               className={`rounded-md border px-3 py-2 ${s.row}`}
             >
-              <div className="flex items-center gap-2 text-[10px] font-mono text-nw-dim tabular">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-mono text-nw-dim tabular">
                 <span className="w-1.5 h-1.5 rounded-full" style={{ background: s.dot, boxShadow: a.severity === "CRITICAL" ? `0 0 6px ${s.dot}` : "none" }} />
                 <span>{fmtTime(a.time)}</span>
-                <span className={`px-1.5 py-0.5 rounded border text-[9px] font-display font-semibold tracking-[0.12em] ${s.pill}`}>{a.severity}</span>
+                <span className={`px-1.5 py-0.5 rounded border text-[10px] font-display font-semibold tracking-[0.12em] ${s.pill}`}>{a.severity}</span>
                 <span className="ml-auto">{fmtDepth(a.depth)} m</span>
               </div>
-              <p className="text-[11px] text-nw-text/90 mt-1.5 leading-relaxed">{a.message}</p>
+              <p className="text-[13px] text-nw-text/90 mt-1.5 leading-relaxed">{a.message}</p>
             </motion.li>
           );
         })}

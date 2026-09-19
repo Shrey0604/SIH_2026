@@ -13,13 +13,13 @@ const Timeline = ({ well, highlightIncidents }) => (
       return (
         <li key={i.id} className={`relative rounded-md px-3 py-2 -ml-1 transition-colors ${hi ? "bg-nw-accent/[0.07] ring-1 ring-nw-accent/40" : ""}`} data-testid={`incident-${i.id}`}>
           <span className="absolute -left-[25px] top-3 w-2.5 h-2.5 rounded-full border-2 border-nw-panel" style={{ background: t.color }} />
-          <div className="flex flex-wrap items-baseline gap-x-2 text-[11px]">
+          <div className="flex flex-wrap items-baseline gap-x-2 text-[13px]">
             <span className="font-mono text-nw-text tabular">{fmtInt(i.depth)} m</span>
             <span className="font-display font-semibold" style={{ color: t.color }}>{t.label}</span>
             <span className="text-nw-dim">· {i.formation} · {i.date} · NPT {i.npt} h</span>
           </div>
-          <p className="text-[11px] text-nw-muted mt-1 leading-relaxed"><span className="text-nw-dim uppercase tracking-wider text-[9px] font-display font-semibold mr-1">Cause</span>{i.cause}</p>
-          <p className="text-[11px] text-nw-text/85 mt-0.5 leading-relaxed"><span className="text-nw-ok uppercase tracking-wider text-[9px] font-display font-semibold mr-1">Fix</span>{i.remedy}</p>
+          <p className="text-[13px] text-nw-muted mt-1 leading-relaxed"><span className="text-nw-dim uppercase tracking-wider text-[10px] font-display font-semibold mr-1">Cause</span>{i.cause}</p>
+          <p className="text-[13px] text-nw-text/85 mt-0.5 leading-relaxed"><span className="text-nw-ok uppercase tracking-wider text-[10px] font-display font-semibold mr-1">Fix</span>{i.remedy}</p>
         </li>
       );
     })}
@@ -40,10 +40,10 @@ const WellRow = ({ w, selected, hi, dim, isMatch, onSelect, highlightIncidents }
         <span className="min-w-0 flex-1">
           <span className="flex items-baseline gap-2">
             <span className="font-display font-semibold text-sm">{w.id}</span>
-            <span className="text-[11px] text-nw-muted truncate">{w.name}</span>
-            {isMatch && <span className="text-[9px] font-mono text-nw-crit tracking-wider ml-auto shrink-0">MATCH {MATCHED.similarity}%</span>}
+            <span className="text-[13px] text-nw-muted truncate">{w.name}</span>
+            {isMatch && <span className="text-[10px] font-mono text-nw-crit tracking-wider ml-auto shrink-0">MATCH {MATCHED.similarity}%</span>}
           </span>
-          <span className="flex items-center gap-2 text-[11px] text-nw-dim mt-0.5">
+          <span className="flex items-center gap-2 text-[13px] text-nw-dim mt-0.5">
             <span className="font-mono tabular">{w.distanceKm} km {compass(w.azimuth)}</span>
             <span>·</span>
             <span className="inline-flex items-center gap-1 text-nw-muted"><Layers className="w-3 h-3" />{w.formation}</span>
@@ -80,12 +80,12 @@ export const NearbyWells = ({ selectedId, onSelect, search, onClearSearch, criti
         )
       }
     >
-      <div className="flex gap-5 h-full">
-        <div className="w-[240px] shrink-0">
+      <div className="flex flex-col lg:flex-row gap-5 h-full">
+        <div className="w-full lg:w-[240px] shrink-0">
           <OffsetMap selectedId={selectedId} highlightIds={ids} criticalHit={criticalHit} onSelect={(id) => onSelect(id)} />
           <div className="flex flex-wrap gap-x-3 gap-y-1 mt-2 px-1">
             {Object.values(INCIDENT_TYPES).map((t) => (
-              <span key={t.label} className="flex items-center gap-1.5 text-[10px] text-nw-dim"><span className="w-1.5 h-1.5 rounded-full" style={{ background: t.color }} />{t.label}</span>
+              <span key={t.label} className="flex items-center gap-1.5 text-[11px] text-nw-dim"><span className="w-1.5 h-1.5 rounded-full" style={{ background: t.color }} />{t.label}</span>
             ))}
           </div>
         </div>

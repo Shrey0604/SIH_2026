@@ -24,16 +24,16 @@ const MetricTile = ({ s, value }) => {
   return (
     <div data-testid={`metric-readout-${s.key}`} className={`rounded-lg border px-4 py-3 flex-1 transition-colors duration-500 ${hot ? "border-nw-crit/50 bg-nw-crit/[0.06]" : "border-nw-line/80 bg-nw-bg/40"}`}>
       <div className="flex items-center justify-between">
-        <span className="text-[10px] tracking-[0.12em] uppercase text-nw-muted font-display font-semibold">{s.full}</span>
+        <span className="text-[11px] tracking-[0.12em] uppercase text-nw-muted font-display font-semibold">{s.full}</span>
         <span className="w-1.5 h-1.5 rounded-full" style={{ background: s.color, boxShadow: `0 0 6px ${s.color}` }} />
       </div>
       <div className="flex items-baseline gap-2 mt-1.5">
         <span className="font-mono text-[26px] font-medium tabular leading-none text-nw-text">{v.toFixed(s.digits)}</span>
-        <span className="text-xs text-nw-dim">{s.unit}</span>
+        <span className="text-[13px] text-nw-dim">{s.unit}</span>
       </div>
-      <div className={`flex items-center gap-1 text-[11px] font-mono mt-1.5 tabular ${hot ? "text-nw-crit" : "text-nw-dim"}`}>
-        <Arrow className="w-3 h-3" />
-        {Math.abs(delta).toFixed(1)}% vs baseline {s.base}
+      <div className={`flex items-center gap-1 text-[13px] font-mono mt-1.5 tabular whitespace-nowrap ${hot ? "text-nw-crit" : "text-nw-dim"}`}>
+        <Arrow className="w-3 h-3 shrink-0" />
+        {Math.abs(delta).toFixed(1)}% vs base {s.base}
       </div>
     </div>
   );
@@ -48,36 +48,36 @@ export const LiveMonitor = ({ points, tick, phase, current }) => {
       critical={phase === "critical"}
       title="Live drilling monitor"
       subtitle="WITS0 · 1 Hz · rolling 40 s window · shaded region = anomaly window"
-      className="h-[430px]"
+      className="lg:h-[430px]"
       right={
         <div className="flex items-center gap-4">
           <div className="text-right">
-            <div className="eyebrow !text-[10px]">Bit depth</div>
+            <div className="eyebrow !text-[11px]">Bit depth</div>
             <div className="font-mono text-lg font-medium tabular leading-none text-nw-accent mt-0.5" data-testid="monitor-depth-readout">
-              {fmtDepth(current.depth)} <span className="text-[11px] text-nw-dim">m MD</span>
+              {fmtDepth(current.depth)} <span className="text-[13px] text-nw-dim">m MD</span>
             </div>
           </div>
           <LiveBadge testId="monitor-live-indicator" />
         </div>
       }
     >
-      <div className="flex h-full gap-5">
+      <div className="flex flex-col lg:flex-row gap-5 h-full">
         <div className="flex-1 min-w-0 flex flex-col">
-          <div className="flex items-center gap-5" data-testid="telemetry-legend">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1" data-testid="telemetry-legend">
             {SERIES.map((s) => (
-              <span key={s.key} className="flex items-center gap-2 text-[11px] text-nw-muted">
+              <span key={s.key} className="flex items-center gap-2 text-[13px] text-nw-muted">
                 <span className="w-4 h-0.5 rounded" style={{ background: s.color }} />
                 {s.label} <span className="text-nw-dim">· {s.unit}</span>
               </span>
             ))}
           </div>
-          <div className="relative flex-1 min-h-0 mt-4" data-testid="telemetry-streaming-chart">
+          <div className="relative mt-4 h-[240px] sm:h-[280px] lg:h-auto lg:flex-1 lg:min-h-0" data-testid="telemetry-streaming-chart">
             <div className="absolute inset-0 pointer-events-none">
               {[0, 25, 50, 75, 100].map((p) => (
                 <div key={p} className="absolute left-0 right-0 border-t border-dashed border-nw-line/60" style={{ top: `${p}%` }} />
               ))}
             </div>
-            <div className="absolute left-1 text-[10px] font-mono text-nw-crit/60 -translate-y-full pb-0.5" style={{ top: `${(fracY / H) * 100}%` }}>
+            <div className="absolute left-1 text-[11px] font-mono text-nw-crit/60 -translate-y-full pb-0.5" style={{ top: `${(fracY / H) * 100}%` }}>
               Barail frac. gradient · 11.1 ppg
             </div>
             <div className="absolute inset-0 overflow-hidden">
@@ -114,13 +114,13 @@ export const LiveMonitor = ({ points, tick, phase, current }) => {
               />
             ))}
           </div>
-          <div className="flex justify-between text-[10px] font-mono text-nw-dim mt-2 tabular">
+          <div className="flex justify-between text-[11px] font-mono text-nw-dim mt-2 tabular">
             {["−40 s", "−30 s", "−20 s", "−10 s", "now"].map((l) => (
               <span key={l}>{l}</span>
             ))}
           </div>
         </div>
-        <div className="w-[210px] shrink-0 flex flex-col gap-3">
+        <div className="w-full lg:w-[210px] shrink-0 flex flex-col gap-3">
           {SERIES.map((s) => (
             <MetricTile key={s.key} s={s} value={current[s.key]} />
           ))}

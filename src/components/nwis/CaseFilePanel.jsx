@@ -7,7 +7,7 @@ import { Panel, WellIcon } from "./ui";
 const SLIDE = { initial: { x: 48, opacity: 0 }, animate: { x: 0, opacity: 1 }, exit: { x: 48, opacity: 0 }, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } };
 
 const Row = ({ label, then, now, hot }) => (
-  <div className="grid grid-cols-[64px_1fr_1fr] gap-2 py-1.5 border-t border-nw-line/50 text-[11px]">
+  <div className="grid grid-cols-[64px_1fr_1fr] gap-2 py-1.5 border-t border-nw-line/50 text-[13px]">
     <span className="text-nw-dim uppercase tracking-wider font-display font-semibold">{label}</span>
     <span className="text-nw-muted">{then}</span>
     <span className={`font-mono tabular ${hot ? "text-nw-crit" : "text-nw-text"}`}>{now}</span>
@@ -16,8 +16,8 @@ const Row = ({ label, then, now, hot }) => (
 
 const Block = ({ title, color, children }) => (
   <div className="pl-3 border-l-2" style={{ borderColor: color }}>
-    <div className="text-[10px] uppercase tracking-[0.14em] font-display font-semibold" style={{ color }}>{title}</div>
-    <p className="text-xs text-nw-text/90 leading-relaxed mt-1">{children}</p>
+    <div className="text-[11px] uppercase tracking-[0.14em] font-display font-semibold" style={{ color }}>{title}</div>
+    <p className="text-[13px] text-nw-text/90 leading-relaxed mt-1">{children}</p>
   </div>
 );
 
@@ -37,7 +37,7 @@ const Idle = () => (
       </svg>
     </div>
     <div className="font-display font-semibold text-sm mt-3">Pattern engine armed</div>
-    <p className="text-xs text-nw-muted mt-1.5 max-w-[260px] leading-relaxed">
+    <p className="text-[13px] text-nw-muted mt-1.5 max-w-[260px] leading-relaxed">
       Streaming the BOG-14 signature against {OFFSET_WELLS.reduce((n, w) => n + w.incidents.length, 0)} indexed incidents. A case file opens automatically when similarity exceeds 85%.
     </p>
     <div className="flex gap-2 mt-4">
@@ -78,9 +78,9 @@ export const CaseFilePanel = ({ criticalHit, current, onLocate }) => {
               <div className="min-w-0 flex-1">
                 <div className="flex items-baseline gap-2">
                   <span className="font-display font-semibold text-base" data-testid="casefile-well-name">{well.id}</span>
-                  <span className="text-xs text-nw-muted truncate">{well.name} · {well.field}</span>
+                  <span className="text-[13px] text-nw-muted truncate">{well.name} · {well.field}</span>
                 </div>
-                <div className="text-[10px] font-mono text-nw-dim mt-0.5">CASE FILE {incident.id} · {incident.date}</div>
+                <div className="text-[11px] font-mono text-nw-dim mt-0.5">CASE FILE {incident.id} · {incident.date}</div>
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   <span className="chip !text-nw-accent !border-nw-accent/40" data-testid="casefile-formation-tag"><Layers className="w-3 h-3" /> {incident.formation}</span>
                   <span className="chip"><MapPin className="w-3 h-3" /> {well.distanceKm} km {compass(well.azimuth)}</span>
@@ -91,7 +91,7 @@ export const CaseFilePanel = ({ criticalHit, current, onLocate }) => {
             </div>
 
             <div data-testid="casefile-signature-table">
-              <div className="grid grid-cols-[64px_1fr_1fr] gap-2 text-[10px] uppercase tracking-[0.12em] text-nw-dim font-display font-semibold pb-1">
+              <div className="grid grid-cols-[64px_1fr_1fr] gap-2 text-[11px] uppercase tracking-[0.12em] text-nw-dim font-display font-semibold pb-1">
                 <span>Param</span><span>{well.id} · {incident.date}</span><span>BOG-14 · now</span>
               </div>
               <Row label="Depth" then={`${fmtInt(incident.depth)} m`} now={`${fmtDepth(current.depth)} m`} />
@@ -104,18 +104,18 @@ export const CaseFilePanel = ({ criticalHit, current, onLocate }) => {
             <Block title="What fixed it" color="#22C55E">{incident.remedy}</Block>
 
             <div data-testid="casefile-corrective-actions">
-              <div className="text-[10px] uppercase tracking-[0.14em] font-display font-semibold text-nw-accent">Recommended now · BOG-14</div>
+              <div className="text-[11px] uppercase tracking-[0.14em] font-display font-semibold text-nw-accent">Recommended now · BOG-14</div>
               <ul className="mt-2 space-y-1.5">
                 {actions.map((a, i) => (
-                  <li key={i} className="flex gap-2 text-xs text-nw-text/90 leading-relaxed">
+                  <li key={i} className="flex gap-2 text-[13px] text-nw-text/90 leading-relaxed">
                     <CheckCircle2 className="w-3.5 h-3.5 text-nw-accent shrink-0 mt-0.5" /> {a}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex items-center justify-between pt-3 border-t border-nw-line/60">
-              <div className="flex items-center gap-1.5 text-[11px] text-nw-dim">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-nw-line/60">
+              <div className="flex flex-wrap items-center gap-1.5 text-[13px] text-nw-dim">
                 Also similar:
                 {alsoSimilar.map((s) => (
                   <button key={s.id} className="chip font-mono" onClick={() => onLocate(s.id)} data-testid={`casefile-similar-${s.id}`}>{s.id} · {s.similarity}%</button>
