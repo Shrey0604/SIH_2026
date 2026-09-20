@@ -1,5 +1,7 @@
 # NWIS — Nearby Wells Intelligence System
 
+> Frontend available: sih-2026-pi-swart.vercel.app 
+
 > **AI-powered institutional memory and predictive decision support for drilling operations**
 
 NWIS is designed to work alongside OIL's existing **eRTMAC** monitoring environment. It converts scattered historical drilling knowledge into structured intelligence, correlates it with the active well, continuously analyses live telemetry, predicts emerging risks, and provides evidence-backed recommendations before historical problems repeat.
