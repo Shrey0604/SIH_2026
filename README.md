@@ -1,6 +1,6 @@
 # NWIS — Nearby Wells Intelligence System
 
-> Frontend available: sih-2026-pi-swart.vercel.app 
+> **Frontend live:** [sih-2026-pi-swart.vercel.app](https://sih-2026-pi-swart.vercel.app) 
 
 > **AI-powered institutional memory and predictive decision support for drilling operations**
 
