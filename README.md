@@ -449,7 +449,6 @@ A decision-support tool in an operations room cannot fail when one dependency go
 <tr><td><b>Backend</b></td><td>Python 3.12 · FastAPI · Pydantic v2 · SQLAlchemy 2 · Uvicorn</td><td>Async REST and WebSockets with strict typed contracts</td></tr>
 <tr><td><b>Document AI</b></td><td>PyMuPDF · Google Gemini (structured output, vision, embeddings)</td><td>Native text first, with multimodal OCR only where a page needs it</td></tr>
 <tr><td><b>Knowledge store</b></td><td>PostgreSQL + pgvector (Supabase) · SQLite + NumPy cosine fallback</td><td>A credible production path with a dependable offline mode</td></tr>
-<tr><td><b>Deployment</b></td><td>Vercel (frontend) · Render (API with WebSockets)</td><td>A global CDN for the UI and a long-running server for streaming</td></tr>
 </table>
 
 All model calls go through **one provider adapter**, and model IDs are set through environment variables, so swapping to an on-premise or sovereign LLM means changing configuration rather than rewriting services.
@@ -523,13 +522,6 @@ The 50 backend tests cover formation projection, analog scoring, risk states, in
 
 </details>
 
-<details>
-<summary><b>☁️ Cloud deployment</b></summary>
-
-The frontend deploys to **Vercel** and the API to **Render** using the `render.yaml` blueprint at the repo root. See [`SIH/SIH/DEPLOY.md`](SIH/SIH/DEPLOY.md) for the step-by-step guide.
-
-</details>
-
 ---
 
 ## 🔌 API at a Glance
@@ -587,7 +579,6 @@ journey
 
 ```text
 SIH_2026/
-├── render.yaml                   # Render blueprint for the API
 └── SIH/SIH/
     ├── backend/
     │   ├── app/

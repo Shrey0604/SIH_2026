@@ -11,7 +11,7 @@ import type {
   WellsResponse,
 } from './types'
 
-export const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000').replace(/\/+$/, '')
+export const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'
 
 async function readJson<T>(response: Response): Promise<T> {
   if (!response.ok) {

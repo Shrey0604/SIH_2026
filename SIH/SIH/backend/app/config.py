@@ -53,17 +53,6 @@ class Settings:
     live_corroboration_threshold: float
     telemetry_fixture_path: Path
     seed_fixture_path: Path
-    # Optional regex for extra browser origins, e.g. Vercel preview deployments.
-    frontend_origin_regex: str | None = None
-
-    @property
-    def frontend_origins(self) -> list[str]:
-        """FRONTEND_ORIGIN accepts a comma-separated list of exact origins."""
-        return [
-            origin.strip().rstrip("/")
-            for origin in self.frontend_origin.split(",")
-            if origin.strip()
-        ]
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -113,5 +102,4 @@ class Settings:
             ),
             telemetry_fixture_path=ROOT_DIR / "demo_data" / "telemetry_scenario.csv",
             seed_fixture_path=ROOT_DIR / "demo_data" / "demo_seed.json",
-            frontend_origin_regex=os.getenv("FRONTEND_ORIGIN_REGEX") or None,
         )
