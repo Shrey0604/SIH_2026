@@ -1,0 +1,537 @@
+{
+  "disclaimer": "Synthetic demo fixture. Not Oil India operational data.",
+  "formations": [
+    "Tipam",
+    "Barail",
+    "Kopili"
+  ],
+  "wells": [
+    {
+      "id": "active-01",
+      "name": "NWIS-ACT-01",
+      "is_active": true,
+      "lat": 25.7552,
+      "lon": 71.3924,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3860,
+      "status": "DRILLING",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "off-01",
+      "name": "NWIS-OFF-01",
+      "is_active": false,
+      "lat": 25.7638,
+      "lon": 71.3854,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3700,
+      "status": "COMPLETED",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "off-02",
+      "name": "NWIS-OFF-02",
+      "is_active": false,
+      "lat": 25.7447,
+      "lon": 71.3798,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3800,
+      "status": "COMPLETED",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "off-03",
+      "name": "NWIS-OFF-03",
+      "is_active": false,
+      "lat": 25.7692,
+      "lon": 71.4035,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3650,
+      "status": "COMPLETED",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "off-04",
+      "name": "NWIS-OFF-04",
+      "is_active": false,
+      "lat": 25.7394,
+      "lon": 71.4076,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3900,
+      "status": "COMPLETED",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "off-05",
+      "name": "NWIS-OFF-05",
+      "is_active": false,
+      "lat": 25.7583,
+      "lon": 71.416,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3750,
+      "status": "COMPLETED",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "off-06",
+      "name": "NWIS-OFF-06",
+      "is_active": false,
+      "lat": 25.7748,
+      "lon": 71.3726,
+      "field_name": "Rajasthan Demo Block",
+      "max_md_m": 3820,
+      "status": "COMPLETED",
+      "well_scope": "LOCAL_OFFSET"
+    },
+    {
+      "id": "ctx-rj-01",
+      "name": "NWIS-CTX-RJ-01",
+      "is_active": false,
+      "lat": 25.45,
+      "lon": 71.1,
+      "field_name": "Rajasthan / Barmer Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-rj-02",
+      "name": "NWIS-CTX-RJ-02",
+      "is_active": false,
+      "lat": 25.93,
+      "lon": 71.62,
+      "field_name": "Rajasthan / Barmer Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-rj-03",
+      "name": "NWIS-CTX-RJ-03",
+      "is_active": false,
+      "lat": 26.1,
+      "lon": 70.92,
+      "field_name": "Rajasthan / Barmer Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-rj-04",
+      "name": "NWIS-CTX-RJ-04",
+      "is_active": false,
+      "lat": 25.3,
+      "lon": 72.0,
+      "field_name": "Rajasthan / Barmer Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-gj-01",
+      "name": "NWIS-CTX-GJ-01",
+      "is_active": false,
+      "lat": 22.45,
+      "lon": 72.6,
+      "field_name": "Gujarat / Cambay Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-gj-02",
+      "name": "NWIS-CTX-GJ-02",
+      "is_active": false,
+      "lat": 23.0,
+      "lon": 72.5,
+      "field_name": "Gujarat / Cambay Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-gj-03",
+      "name": "NWIS-CTX-GJ-03",
+      "is_active": false,
+      "lat": 21.9,
+      "lon": 72.8,
+      "field_name": "Gujarat / Cambay Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-gj-04",
+      "name": "NWIS-CTX-GJ-04",
+      "is_active": false,
+      "lat": 24.0,
+      "lon": 71.9,
+      "field_name": "Gujarat / Cambay Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-as-01",
+      "name": "NWIS-CTX-AS-01",
+      "is_active": false,
+      "lat": 27.47,
+      "lon": 94.91,
+      "field_name": "Upper Assam Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-as-02",
+      "name": "NWIS-CTX-AS-02",
+      "is_active": false,
+      "lat": 27.3,
+      "lon": 95.2,
+      "field_name": "Upper Assam Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-as-03",
+      "name": "NWIS-CTX-AS-03",
+      "is_active": false,
+      "lat": 26.75,
+      "lon": 94.2,
+      "field_name": "Upper Assam Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-as-04",
+      "name": "NWIS-CTX-AS-04",
+      "is_active": false,
+      "lat": 27.9,
+      "lon": 95.0,
+      "field_name": "Upper Assam Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-tr-01",
+      "name": "NWIS-CTX-TR-01",
+      "is_active": false,
+      "lat": 23.84,
+      "lon": 91.28,
+      "field_name": "Tripura Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-tr-02",
+      "name": "NWIS-CTX-TR-02",
+      "is_active": false,
+      "lat": 23.55,
+      "lon": 91.45,
+      "field_name": "Tripura Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-tr-03",
+      "name": "NWIS-CTX-TR-03",
+      "is_active": false,
+      "lat": 24.1,
+      "lon": 91.65,
+      "field_name": "Tripura Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-tr-04",
+      "name": "NWIS-CTX-TR-04",
+      "is_active": false,
+      "lat": 23.25,
+      "lon": 91.35,
+      "field_name": "Tripura Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-kg-01",
+      "name": "NWIS-CTX-KG-01",
+      "is_active": false,
+      "lat": 16.7,
+      "lon": 82.3,
+      "field_name": "Krishna-Godavari Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-kg-02",
+      "name": "NWIS-CTX-KG-02",
+      "is_active": false,
+      "lat": 16.3,
+      "lon": 82.15,
+      "field_name": "Krishna-Godavari Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-kg-03",
+      "name": "NWIS-CTX-KG-03",
+      "is_active": false,
+      "lat": 17.1,
+      "lon": 82.5,
+      "field_name": "Krishna-Godavari Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-kg-04",
+      "name": "NWIS-CTX-KG-04",
+      "is_active": false,
+      "lat": 15.9,
+      "lon": 81.8,
+      "field_name": "Krishna-Godavari Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-mu-01",
+      "name": "NWIS-CTX-MU-01",
+      "is_active": false,
+      "lat": 19.2,
+      "lon": 71.5,
+      "field_name": "Mumbai / Western Offshore Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-mu-02",
+      "name": "NWIS-CTX-MU-02",
+      "is_active": false,
+      "lat": 18.7,
+      "lon": 71.8,
+      "field_name": "Mumbai / Western Offshore Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-mu-03",
+      "name": "NWIS-CTX-MU-03",
+      "is_active": false,
+      "lat": 20.0,
+      "lon": 71.0,
+      "field_name": "Mumbai / Western Offshore Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    },
+    {
+      "id": "ctx-mu-04",
+      "name": "NWIS-CTX-MU-04",
+      "is_active": false,
+      "lat": 17.9,
+      "lon": 72.0,
+      "field_name": "Mumbai / Western Offshore Demo Region",
+      "max_md_m": 0,
+      "status": "HISTORICAL_CONTEXT",
+      "well_scope": "CONTEXT"
+    }
+  ],
+  "formation_intervals": {
+    "NWIS-ACT-01": {
+      "Tipam": [
+        2800,
+        3090
+      ],
+      "Barail": [
+        3090,
+        3520
+      ],
+      "Kopili": [
+        3520,
+        3860
+      ]
+    },
+    "NWIS-OFF-01": {
+      "Tipam": [
+        2730,
+        3020
+      ],
+      "Barail": [
+        3020,
+        3440
+      ],
+      "Kopili": [
+        3440,
+        3770
+      ]
+    },
+    "NWIS-OFF-02": {
+      "Tipam": [
+        2860,
+        3150
+      ],
+      "Barail": [
+        3150,
+        3575
+      ],
+      "Kopili": [
+        3575,
+        3890
+      ]
+    },
+    "NWIS-OFF-03": {
+      "Tipam": [
+        2675,
+        2960
+      ],
+      "Barail": [
+        2960,
+        3370
+      ],
+      "Kopili": [
+        3370,
+        3690
+      ]
+    },
+    "NWIS-OFF-04": {
+      "Tipam": [
+        2770,
+        3065
+      ],
+      "Barail": [
+        3065,
+        3500
+      ],
+      "Kopili": [
+        3500,
+        3840
+      ]
+    },
+    "NWIS-OFF-05": {
+      "Tipam": [
+        2815,
+        3105
+      ],
+      "Barail": [
+        3105,
+        3535
+      ],
+      "Kopili": [
+        3535,
+        3865
+      ]
+    },
+    "NWIS-OFF-06": {
+      "Tipam": [
+        2715,
+        3005
+      ],
+      "Barail": [
+        3005,
+        3435
+      ],
+      "Kopili": [
+        3435,
+        3760
+      ]
+    }
+  },
+  "events": [
+    {
+      "id": "evt-ml-01",
+      "well": "NWIS-OFF-01",
+      "formation": "Barail",
+      "hazard_type": "MUD_LOSS",
+      "start_md_m": 3294,
+      "end_md_m": 3302,
+      "severity": "MEDIUM",
+      "description": "Partial circulation loss recorded while drilling the Barail interval.",
+      "historical_response": "Flow was reduced and the interval was monitored before drilling resumed.",
+      "extraction_confidence": 0.94,
+      "document": "OFF-01_DDR_excerpt.pdf",
+      "page": 2
+    },
+    {
+      "id": "evt-ml-02",
+      "well": "NWIS-OFF-02",
+      "formation": "Barail",
+      "hazard_type": "MUD_LOSS",
+      "start_md_m": 3429,
+      "end_md_m": 3438,
+      "severity": "HIGH",
+      "description": "Sustained mud loss observed in the Barail interval.",
+      "historical_response": "Loss-control material was recorded and drilling parameters were reduced while circulation was checked.",
+      "extraction_confidence": 0.91,
+      "document": "OFF-02_WCR_excerpt.pdf",
+      "page": 4
+    },
+    {
+      "id": "evt-ml-03",
+      "well": "NWIS-OFF-03",
+      "formation": "Barail",
+      "hazard_type": "MUD_LOSS",
+      "start_md_m": 3227,
+      "end_md_m": 3235,
+      "severity": "MEDIUM",
+      "description": "Reduced returns indicated partial lost circulation in Barail.",
+      "historical_response": "The crew stabilized circulation and resumed with closer monitoring.",
+      "extraction_confidence": 0.96,
+      "document": "OFF-03_DDR_excerpt.pdf",
+      "page": 1
+    },
+    {
+      "id": "evt-ml-05",
+      "well": "NWIS-OFF-05",
+      "formation": "Barail",
+      "hazard_type": "MUD_LOSS",
+      "start_md_m": 3379,
+      "end_md_m": 3387,
+      "severity": "LOW",
+      "description": "Minor losses were logged while drilling Barail.",
+      "historical_response": "The interval was monitored and the recorded loss rate reduced before normal drilling resumed.",
+      "extraction_confidence": 0.88,
+      "document": "OFF-05_DDR_excerpt.pdf",
+      "page": 2
+    },
+    {
+      "id": "evt-sp-01",
+      "well": "NWIS-OFF-04",
+      "formation": "Kopili",
+      "hazard_type": "STUCK_PIPE",
+      "start_md_m": 3675,
+      "end_md_m": 3680,
+      "severity": "HIGH",
+      "description": "Increasing torque preceded a stuck-pipe incident in Kopili.",
+      "historical_response": "The operation recorded a staged freeing attempt before normal operations resumed.",
+      "extraction_confidence": 0.93,
+      "document": "OFF-04_WCR_excerpt.pdf",
+      "page": 6
+    },
+    {
+      "id": "evt-kick-01",
+      "well": "NWIS-OFF-06",
+      "formation": "Tipam",
+      "hazard_type": "KICK",
+      "start_md_m": 2930,
+      "end_md_m": 2934,
+      "severity": "HIGH",
+      "description": "Flow increase and pit gain were recorded during a kick event.",
+      "historical_response": "The well was stabilized using the documented well-control procedure.",
+      "extraction_confidence": 0.95,
+      "document": "OFF-06_WCR_excerpt.pdf",
+      "page": 3
+    }
+  ]
+}

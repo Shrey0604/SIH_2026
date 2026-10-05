@@ -1,0 +1,9 @@
+# Byte-exact files. The demo report is hash-locked (DEMO_REPORT_SHA256), and
+# uncompressed PDFs look like text to git, so autocrlf would silently rewrite them.
+*.pdf binary
+*.png binary
+*.db binary
+
+# Shell scripts and the Makefile must keep LF endings to run under bash on Windows.
+*.sh text eol=lf
+Makefile text eol=lf
