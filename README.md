@@ -27,9 +27,9 @@
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="SIH/SIH/artifacts/screenshots/nwis-visual-polish-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="SIH/SIH/artifacts/screenshots/nwis-visual-polish-light.png">
-  <img alt="NWIS live workspace: the offset-well map, the formation-aware Look-Ahead Hazard Horizon and live eRTMAC telemetry" src="SIH/SIH/artifacts/screenshots/nwis-visual-polish-dark.png" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="SIH/SIH/artifacts/screenshots/nwis-live-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="SIH/SIH/artifacts/screenshots/nwis-live-light.png">
+  <img alt="NWIS live workspace: the offset-well map, the formation-aware Look-Ahead Hazard Horizon and live eRTMAC telemetry" src="SIH/SIH/artifacts/screenshots/nwis-live-dark.png" width="100%">
 </picture>
 
 <sub><i>Live workspace: the active well, its six offset wells, the Formation-Aware Look-Ahead Hazard Horizon and streaming eRTMAC telemetry, all on one screen.</i></sub>
