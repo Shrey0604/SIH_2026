@@ -46,6 +46,10 @@ With the development servers running, execute the exact five-run Phase 8 chain w
 .venv/bin/python scripts/smoke_demo.py
 ```
 
+## Deployment
+
+The frontend deploys to Vercel and the backend to Render. See [DEPLOY.md](DEPLOY.md) for the step-by-step guide.
+
 ## Gemini configuration
 
 All model calls are backend-only and pass through one provider adapter. Configure the

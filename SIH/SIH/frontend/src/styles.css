@@ -19,10 +19,9 @@
   --watch: #eba33a;
   --elevated: #ea5a51;
   --cite: #6fa9ff;
-  --ask: #6e5ae6;
-  --ask-hover: #7d6bf0;
+  --ask: #2f5d9e;
+  --ask-hover: #386bb2;
   --ask-fg: #ffffff;
-  --ask-text: #b9afff;
   --clear-text: #5fd0a3;
   --watch-text: #f2b85c;
   --elevated-text: #ff978f;
@@ -66,10 +65,9 @@
   --watch: #b26b00;
   --elevated: #c8392f;
   --cite: #0b60c9;
-  --ask: #5b45d6;
-  --ask-hover: #4c37c2;
+  --ask: #1f3f6e;
+  --ask-hover: #2a5089;
   --ask-fg: #ffffff;
-  --ask-text: #4a35c0;
   --clear-text: #157a52;
   --watch-text: #96590a;
   --elevated-text: #ad2c23;
@@ -468,30 +466,27 @@ kbd {
 .system-status.is-degraded i { background: var(--watch); }
 /* The copilot is the product's headline feature: the one solid-colour control in the top bar. */
 .ask-button {
-  height: 38px;
+  height: 36px;
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 0 8px 0 15px;
-  border: 0;
-  border-radius: 999px;
+  gap: 8px;
+  padding: 0 7px 0 13px;
+  border: 1px solid color-mix(in srgb, var(--ask) 80%, #000000);
+  border-radius: 8px;
   background: var(--ask);
   color: var(--ask-fg);
-  font: 650 14px/1 var(--font-ui);
+  font: 600 14px/1 var(--font-ui);
   white-space: nowrap;
   cursor: pointer;
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ask) 18%, transparent);
-  transition: background-color 140ms ease, box-shadow 140ms ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: background-color 140ms ease;
 }
-.ask-button:hover {
-  background: var(--ask-hover);
-  box-shadow: 0 0 0 5px color-mix(in srgb, var(--ask) 26%, transparent);
-}
+.ask-button:hover { background: var(--ask-hover); }
 .ask-button kbd {
-  padding: 4px 7px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
-  color: inherit;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
 }
 

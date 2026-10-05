@@ -5,7 +5,7 @@ import {
   FileText,
   Gauge,
   MapPinned,
-  Sparkles,
+  TextSearch,
   Moon,
   Pause,
   Play,
@@ -205,7 +205,7 @@ export function AppShell({
             </span>
           )}
           <button type="button" className="ask-button" onClick={onOpenCopilot} title="Ask questions of historical well evidence" aria-label="Ask NWIS">
-            <Sparkles size={16} strokeWidth={1.9} aria-hidden="true" />
+            <TextSearch size={16} strokeWidth={1.9} aria-hidden="true" />
             <span>Ask NWIS</span>
             <kbd>{isMac ? '⌘' : 'Ctrl'} K</kbd>
           </button>
